@@ -1,7 +1,12 @@
 # Understanding the Real-time Web
 This will be my notes from what I learned from my ASP.NET journey. - [Jayharron Abejar](https://jayharronabejar.info)
 - I have translated the course to a markdown file, from [Getting Started with ASP.NET Core 2 SignalR](https://app.pluralsight.com/library/courses/aspdotnet-core-signalr-getting-started/table-of-contents) course path at PluralSight
+### What is Real-time web?
+According to Wikipedia:
+
+The real-time web is a network web using technologies and practices that enable users to receive information as soon as it is published by its authors, rather than requiring that they or their software check a source periodically for updates.
 # Server Sent Events
+The real-time web is a network web using technologies and practices that enable users to receive information as soon as it is published by its authors, rather than requiring that they or their software check a source periodically for updates. [source](https://en.wikipedia.org/wiki/Server-sent_events)
 ### Pros and Cons
 - Better than [Polling or Long Polling]
 - Simple HTTP
@@ -302,7 +307,7 @@ SignalR consists of 2 parts
 ### SignalR Hubs
 A hub protocol is a format used to serialize parameters to and deserialize paraments from. Default protocol is **JSON**
 ### Formats
-```
+```json
 JSON (38 bytes)
 
 {
