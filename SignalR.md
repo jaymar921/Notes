@@ -307,7 +307,7 @@ SignalR consists of 2 parts
 ### SignalR Hubs
 A hub protocol is a format used to serialize parameters to and deserialize paraments from. Default protocol is **JSON**
 ### Formats
-```json
+```
 JSON (38 bytes)
 
 {
