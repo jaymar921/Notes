@@ -49,3 +49,26 @@ Remove an image
 ```
 > docker rmi <imageId>
 ```
+
+### Bridge network
+
+Creating a bridge network
+
+```
+docker network create
+
+// another way
+docker network create --driver bridge network_name
+```
+
+Showing list of network
+
+```
+docker network ls
+```
+
+Remove network
+
+```
+docker network rm [network]
+```
