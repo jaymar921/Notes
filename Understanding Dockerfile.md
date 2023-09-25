@@ -72,3 +72,13 @@ Remove network
 ```
 docker network rm [network]
 ```
+
+### Running a Database container in a Network
+
+```
+docker run -d --net=network_name --name=mongodb mongo
+                   ^                    ^
+         Bridge network to use    Database container name
+```
+
+Note that `--net` or `--network` can be used
