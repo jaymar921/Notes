@@ -35,3 +35,17 @@ example:
 ```
 > docker build -t jaymar/photolib:1.0 .
 ```
+
+### Docker Image Commands
+
+List Docker Images
+
+```
+> docker images
+```
+
+Remove an image
+
+```
+> docker rmi <imageId>
+```
