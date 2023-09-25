@@ -15,7 +15,7 @@ EXPOSE 3000 <- expose the port 3000, that will be what this container will be li
 ENTRYPOINT ["node", "server.js"] <- what will be the first command that we're going to run to start this up.
 ```
 
-Build an image,
+Build an image
 
 ```
 > docker built -t <name> .
@@ -82,3 +82,54 @@ docker run -d --net=network_name --name=mongodb mongo
 ```
 
 Note that `--net` or `--network` can be used
+
+### Building and Running Multiple Containers with Docker Compose
+
+Docker Compose Features
+
+- Define services using a YAML configuration file
+- Build one or more images
+- Start and stop services
+- View the status of running services
+- Stream the log output of running services
+
+Docker Compose Workflow
+
+`Build Services` -> `Start Up Services` -> `Tear Down Services`
+
+### Docker compose services
+
+inside the `docker-compose.yml`, note that the indentation matters
+
+```yml
+version: "3.x"
+services:
+  app:
+    container_name: myapp_1
+    image: myapp_1
+    build:
+      context: . # (.) root folder
+      dockerfile: /path/to/Dockerfile
+    ports:
+      - "3000:3000" # external_port : internal_port
+    networks:
+      - network_name
+    depends_on:
+      - mongodb # ensures that the mongodb runs first before this service, but it wont make sure that it's ready to accept connections
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    networks:
+      - network_name
+
+networks:
+  network_name:
+    driver: bridge
+```
+
+### Docker Compose Commands
+
+- `docker-compose build` - build all the apps specified in the services
+- `docker-compose up` - run the containers/services
+- `docker-compose down` - shutdown all containers/services and delete them
