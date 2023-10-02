@@ -1,5 +1,9 @@
 # Running and Configuring Prometheus
 
+### What is prometheus
+
+Prometheus is a free software application used for event monitoring and alerting. It records metrics in a time series database built using an HTTP pull model, with flexible queries and real-time alerting.
+
 ### Download Prometheus
 
 Check [Prometheus download options](https://prometheus.io/download/) including OS and CPI architecture).
