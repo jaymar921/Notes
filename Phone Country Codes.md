@@ -1,5 +1,5 @@
 # Phone Country Codes
-A json file with list of phone country codes
+A json file with list of phone country codes, credits to @addevin
 
 The object contains:
 - name
